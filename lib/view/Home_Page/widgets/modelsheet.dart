@@ -20,7 +20,7 @@ class ModelSheet1 extends StatefulWidget {
 }
 
 class _ModelSheet1State extends State<ModelSheet1> {
-  late DateTime _date;
+  DateTime? _date;
   String selectedoption = "";
   TextEditingController Quantity = TextEditingController();
   TextEditingController Time = TextEditingController();
@@ -145,6 +145,12 @@ class _ModelSheet1State extends State<ModelSheet1> {
                 Color.fromRGBO(234, 83, 82, 1),
               )),
               onPressed: () async {
+                if (_date == null) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Please select a delivery date")),
+    );
+    return;
+  }
                 final response = await orderdetail(
                     quantity: Quantity.text.toString(),
                     date: _date.toString(),

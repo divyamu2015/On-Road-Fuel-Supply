@@ -144,7 +144,7 @@ class OrdersFuelPage extends StatelessWidget {
                                      if(response.message=="success")
                                      {
                                        ScaffoldMessenger.of(context)
-                                           .showSnackBar(const SnackBar(content: Text("Delivery Started")));
+                                           .showSnackBar(const SnackBar(content: Text("Delivery Completed")));
                                      }
                                      else
                                      {

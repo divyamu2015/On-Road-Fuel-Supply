@@ -7,7 +7,7 @@ import '../Account_Page/Pages/account_Page.dart';
 import '../Home_Page/Pages/Home_Page.dart';
 import '../Location_Page/pages/Locationpage.dart';
 import '../Orders_Page/Pages/orders_Page.dart';
-import '../Splash_Screen/splash_screen.dart'; 
+import '../Splash_Screen/splash_screen.dart';
 //import '../get _location/get_location.dart';
 //import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -102,17 +102,17 @@ class _MainHomePageState extends State<MainHomePage> {
                 Icons.person,
                 color: Colors.white,
               )),
-          IconButton(
-              onPressed: () {
-                setState(() {
-                  // Locationdata1.stopLocationUpdate();
-                  _currentIndex = 3;
-                });
-              },
-              icon: const Icon(
-                Icons.person,
-                color: Colors.white,
-              ))
+          // IconButton(
+          //     onPressed: () {
+          //       setState(() {
+          //         // Locationdata1.stopLocationUpdate();
+          //         _currentIndex = 3;
+          //       });
+          //     },
+          //     icon: const Icon(
+          //       Icons.person,
+          //       color: Colors.white,
+          //     ))
         ],
       ),
       body: _screens[_currentIndex],
